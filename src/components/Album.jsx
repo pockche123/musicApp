@@ -1,5 +1,5 @@
 
-import '../style/Album.css'
+import '../styles/Album.css'
 
 import { useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

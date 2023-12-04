@@ -3,7 +3,7 @@ import { data } from '../assets/file';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import '../style/HomePage.css'
+import '../styles/HomePage.css'
 
 const HomePage = () => {
 
