@@ -15,6 +15,8 @@ export default defineConfig({
   server: {
     port: 3000, // Customize the port if needed
     open: true, // Automatically open the browser on server start
+    strictPort: true,
+    host: true
   },
   resolve: {
     alias: {
