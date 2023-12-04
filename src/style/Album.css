@@ -1,0 +1,115 @@
+@import url('https://fonts.cdnfonts.com/css/pinewood-sans-personal-use');
+
+@import url('https://fonts.cdnfonts.com/css/lexend');
+
+.album-logo {
+    flex: 1;
+    font-family: 'Pinewood Sans PERSONAL USE', sans-serif;
+    color: orangered;
+    margin: 1em;
+    margin-bottom: 0;
+    padding: 1em;
+    text-align: center;
+
+}
+
+.album-container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+    font-family: 'Lexend', sans-serif;
+
+    /* display: flex;
+  flex-direction: row;
+justify-content: center; */
+}
+
+.album-info {
+    /* display: flex;
+    flex-direction: row; */
+    padding: 3em;
+    padding-top: 0;
+}
+
+.album-image {
+    width: 200px;
+}
+
+.album-info1 {
+
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    width: 100%;
+
+}
+
+.album-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+
+#albumTitle {
+    font-size: 60px;
+    font-weight: bolder;
+    padding-bottom: 0.5em;
+
+}
+
+.album-info1-info {
+    margin: 0.5em 2em;
+
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
+.album-info2 {
+    margin: 2em 0;
+    margin-bottom: 5em;
+
+}
+
+.album-info3 {
+
+    color: white;
+    padding: 1em;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set background-size to cover */
+    width: 80vw;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    margin-top: 2em;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.about {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+
+.plus-icon.hidden {
+    display: none;
+}
+
+.plus-icon.visible {
+    display: inline-block;
+}
+
+.plus-icon.visible:hover {
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.fa-check {
+    color: darkgreen;
+}
