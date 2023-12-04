@@ -51,6 +51,16 @@ h1 {
     }
 
     .name {
-        margin: 1em 0;
+        margin: 10em 0;
+        font-size: xx-large;
     }
+
+
+
+    .carousel{
+        margin-top:15em;
+        margin-bottom: 6em;
+    }
+
+
 }
