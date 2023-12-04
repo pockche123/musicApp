@@ -26,6 +26,15 @@ h1 {
 
 }
 
+.tagLine {
+    display: flex;
+
+    justify-content: center;
+    font-family: 'Lexend', sans-serif;
+    /* font-family: 'Pinewood Sans PERSONAL USE', sans-serif; */
+    color: #2a63cc
+}
+
 .carousel {
     /* border: 1px solid black; */
     height: 100%;

@@ -27,7 +27,7 @@ const HomePage = () => {
 
                 </div>
                 <div className="tagLine">
-                    <h5>Music<br/>for <br/> Everyone</h5>
+                    <h5>Music<br/>for <br/> Everyone.</h5>
                     </div>
 
                 </div>
