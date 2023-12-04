@@ -74,10 +74,6 @@ const Album = () => {
                                         onClick={() => handleAddSong(index)} /></td>
                                     <td>{a.duration}</td>
                                 </tr>
-
-
-
-
                             ))}
                         </tbody>
 

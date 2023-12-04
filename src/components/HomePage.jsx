@@ -21,9 +21,16 @@ const HomePage = () => {
 
     return (
         <div className="container">
+            <div>
             <div className="name">
                 <h1>Resonance</h1>
-            </div>
+
+                </div>
+                <div className="tagLine">
+                    <h5>Music<br/>for <br/> Everyone</h5>
+                    </div>
+
+                </div>
             <div className="carousel">
 
                 <Carousel>
