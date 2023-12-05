@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
-import { data } from '../assets/file';
+import { data } from '../../assets/file';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import '../styles/HomePage.css'
+import './HomePage.css'
 
 const HomePage = () => {
 
@@ -22,17 +22,14 @@ const HomePage = () => {
     return (
         <div className="container">
             <div>
-            <div className="name">
-                <h1>Resonance</h1>
-
+                <div className="name">
+                    <h1>Resonance</h1>
                 </div>
                 <div className="tagLine">
-                    <h5>Music<br/>for <br/> Everyone.</h5>
-                    </div>
-
+                    <h5>Music<br />for <br /> Everyone.</h5>
                 </div>
+            </div>
             <div className="carousel">
-
                 <Carousel>
                     {albums?.map(album => (
                         <Carousel.Item key={album.id} interval={3000}>
