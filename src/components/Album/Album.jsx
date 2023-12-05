@@ -1,5 +1,5 @@
 
-import '../styles/Album.css'
+import './Album.css'
 
 import { useLocation, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import TableCard from './TableCard';
+import AlbumInfo from './AlbumInfo';
 
 
 
@@ -16,7 +18,6 @@ const Album = () => {
     const album = location.state && location.state.album
     const [hoveredRow, setHoveredRow] = useState(null);
     const navigate = useNavigate()
-
     const [iconStates, setIconStates] = useState(Array(album?.songs?.length).fill(faPlus));
 
     const handleAddSong = (index) => {
@@ -36,26 +37,16 @@ const Album = () => {
 
     return (
         <article className="album-container">
+            <ToastContainer />
             <div className="album-logo" onClick={() => navigate("/") }>
                 <h1>Resonance</h1>
             </div>
             <section className="album-info">
                 <div className="album-info1">
-                    <div className="album-image">
-                        <img src={album?.image} alt="album" />
-                    </div>
-                    <div className="album-info1-info">
-                        <label htmlFor="albumTitle">Album</label>
-                        <p id="albumTitle">{album?.album_name}</p>
-                        <div className="list">
-                            <label>{album?.artist}</label>,&nbsp;
-                            <label>{album?.release_year}</label>,&nbsp;
-                            <label>{album?.songs.length} songs</label>
-                        </div>
-                    </div>
+                    <AlbumInfo album={album}/>
                 </div>
+
                 <div className="album-info2">
-                    <ToastContainer />
                     <table className="table table-hover">
                         <thead>
                             <tr>
@@ -67,36 +58,21 @@ const Album = () => {
                         </thead>
                         <tbody>
                             {album?.songs?.map((a, index) => (
-                                <tr key={index} onMouseEnter={() => setHoveredRow(index)}
-                                    onMouseLeave={() => setHoveredRow(null)}>
-                                    <th scope="row">{index + 1}</th>
-                                    <td>{a.title}</td>
-                                    <td><FontAwesomeIcon icon={iconStates[index]} className={`plus-icon ${hoveredRow === index ? 'visible' : 'hidden'}`}
-                                        onClick={() => handleAddSong(index)} /></td>
-                                    <td>{a.duration}</td>
-                                </tr>
-
-
-
-
+                            <TableCard key={index} a={a} index={index}  setHoveredRow={setHoveredRow} hoveredRow={hoveredRow} handleAddSong={handleAddSong} iconStates={iconStates}/>        
                             ))}
                         </tbody>
-
                     </table>
-
                 </div>
+
                 <div className="album-info3" style={{ backgroundImage: `url(${album?.artist_image})` }}>
                     <p className="about">
                         <p>
                             <b >About</b></p>
                         {album?.about}
                     </p>
-
                 </div>
-
             </section>
         </article>
-
     )
 }
 
