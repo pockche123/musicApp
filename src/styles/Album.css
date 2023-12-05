@@ -12,6 +12,9 @@
     text-align: center;
 
 }
+.album-logo:hover{
+    cursor: pointer;
+}
 
 .album-container {
     width: 100vw;

@@ -1,7 +1,7 @@
 
 import '../styles/Album.css'
 
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faClock, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -15,6 +15,7 @@ const Album = () => {
     const location = useLocation();
     const album = location.state && location.state.album
     const [hoveredRow, setHoveredRow] = useState(null);
+    const navigate = useNavigate()
 
     const [iconStates, setIconStates] = useState(Array(album?.songs?.length).fill(faPlus));
 
@@ -35,7 +36,7 @@ const Album = () => {
 
     return (
         <article className="album-container">
-            <div className="album-logo">
+            <div className="album-logo" onClick={() => navigate("/") }>
                 <h1>Resonance</h1>
             </div>
             <section className="album-info">
