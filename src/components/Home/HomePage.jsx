@@ -33,7 +33,7 @@ const HomePage = () => {
                 <Carousel>
                     {albums?.map(album => (
                         <Carousel.Item key={album.id} interval={3000}>
-                            <img src={album.image} alt="album" className="d-block w-100" onClick={() => handleClick(album)} />
+                            <img role="albumImg" src={album.image} alt="album" className="d-block w-100" onClick={() => handleClick(album)} />
                         </Carousel.Item>
                     )
                     )}

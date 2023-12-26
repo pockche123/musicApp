@@ -29,4 +29,7 @@ export default defineConfig({
     outDir: 'dist', // Specify the output directory for production builds
     sourcemap: true, // Generate source maps for better debugging
   },
+   test: {
+    environment:'jsdom'
+  }
 });
